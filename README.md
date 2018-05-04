@@ -4,7 +4,7 @@
 
 > This simple application parses texts from the upload images and displays them as json data
 
-> Note: Upload images are not persisted anywhere. :) 
+> Note: Uploaded images are not persisted anywhere. :) 
 
 > [view demo](https://vision-client.netlify.com/)
 
