@@ -4,6 +4,7 @@
 
 > This simple application parses texts from the upload images and displays them as json data
 
+> [view demo](https://vision-client.netlify.com/)
 
 ## Build Setup
 
