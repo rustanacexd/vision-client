@@ -35,7 +35,7 @@
       </section>
       <section class="column">
         <div class="columns">
-          <div class="column is-one-third" v-for="(url,index) in imageUrls" :key="index">
+          <div class="column is-half" v-for="(url,index) in imageUrls" :key="index">
             <div class="card">
               <div class="card-image">
                 <figure class="image">
