@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="columns">
-      <section class="column is-one-quarter">
+      <section class="column is-one-third has-text-centered">
         <b-field>
           <b-upload v-model="dropFiles"
                     multiple
@@ -34,7 +34,7 @@
         </div>
       </section>
       <section class="column">
-        <div class="columns">
+        <div class="columns is-multiline is-centered">
           <div class="column is-half" v-for="(url,index) in imageUrls" :key="index">
             <div class="card">
               <div class="card-image">
@@ -44,7 +44,6 @@
               </div>
               <div class="card-content">
                 <div class="content">
-
                   <pre v-highlightjs="jsonData[index]"><code
                     class="javascript"></code></pre>
                 </div>
@@ -89,12 +88,17 @@
           })
       },
       handleFileAdd(files) {
-        const currentFile = files[files.length - 1]
-        this.isLoading = true
-        this.fetchData(currentFile).then(() => {
-          this.isLoading = false
-          this.imageUrls.push(this.buildImageUrl(currentFile))
-        })
+        const filesLength = this.dropFiles.length
+        const currentFile = files[filesLength - 1]
+        console.log(filesLength)
+        if (this.jsonData.length !== filesLength) {
+          this.isLoading = true
+          this.fetchData(currentFile).then(() => {
+            this.isLoading = false
+            this.imageUrls.push(this.buildImageUrl(currentFile))
+          })
+        }
+
 
       }
     }
