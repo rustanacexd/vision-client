@@ -2,7 +2,7 @@
 
 > Quick hackathon I did for a job ad I saw. It serves as an exercise. :P
 
-> This simple application parses texts from the upload images and displays them as json data
+> This simple application parses texts from the uploaded images and displays them as json data
 
 > Note: Uploaded images are not persisted anywhere. :) 
 
